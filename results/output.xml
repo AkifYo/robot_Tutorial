@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-28T08:56:54.727209" rpa="false" schemaversion="5">
+<suite id="s1" name="robot Tutorial" source="C:\Users\Lenovo X270\Desktop\robot_Tutorial">
+<suite id="s1-s1" name="DemoTestLambda" source="C:\Users\Lenovo X270\Desktop\robot_Tutorial\DemoTestLambda">
+<suite id="s1-s1-s1" name="herokuLogin" source="C:\Users\Lenovo X270\Desktop\robot_Tutorial\DemoTestLambda\herokuLogin.robot">
+<test id="s1-s1-s1-t1" name="Test 1" line="11">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-08-28T08:56:56.182926" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Lenovo X270\\Desktop\\robot_Tutorial\\results\\browser\\traces\\6386d664-29c4-49d7-8b07-999c3dcac61b"}</msg>
+<msg time="2024-08-28T08:56:56.638934" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Lenovo X270\\Desktop\\robot_Tutorial\\results\\browser\\traces\\6386d664-29c4-49d7-8b07-999c3dcac61b"}</msg>
+<arg>browser=${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-08-28T08:56:56.181928" elapsed="0.457995"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-08-28T08:56:59.085924" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/login</msg>
+<msg time="2024-08-28T08:56:59.086923" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-08-28T08:56:56.657922" elapsed="2.429001"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-08-28T08:56:59.106922" level="INFO">Types the text 'tomsmith' in the given field.</msg>
+<arg>id=username</arg>
+<arg>tomsmith</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-28T08:56:59.105924" elapsed="0.192998"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2024-08-28T08:56:59.300925" level="INFO">Types the text 'SuperSecretPassword!' in the given field.</msg>
+<arg>id=password</arg>
+<arg>SuperSecretPassword!</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-08-28T08:56:59.299923" elapsed="0.173010"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-08-28T08:56:59.474924" level="INFO">Clicks the element 'css=button &gt;&gt; text=Login'.</msg>
+<arg>css=button &gt;&gt; text=Login</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-08-28T08:56:59.473928" elapsed="0.399998"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-28T08:56:59.876924" level="INFO">Login is succesful</msg>
+<arg>message=Login is succesful</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-28T08:56:59.875925" elapsed="0.001998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-28T08:57:03.879955" level="INFO">Slept 4 seconds.</msg>
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-28T08:56:59.877923" elapsed="4.002032"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<msg time="2024-08-28T08:57:03.885921" level="INFO">${current url} = https://the-internet.herokuapp.com/secure</msg>
+<var>${current url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2024-08-28T08:57:03.880926" elapsed="0.004995"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current url}</arg>
+<arg>${expected url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-08-28T08:57:03.887924" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-08-28T08:56:56.174926" elapsed="7.714999"/>
+</test>
+<status status="PASS" start="2024-08-28T08:56:54.775206" elapsed="9.513498"/>
+</suite>
+<status status="PASS" start="2024-08-28T08:56:54.770205" elapsed="9.534502"/>
+</suite>
+<status status="PASS" start="2024-08-28T08:56:54.736205" elapsed="9.572508"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="robot Tutorial">robot Tutorial</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="DemoTestLambda">robot Tutorial.DemoTestLambda</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="herokuLogin">robot Tutorial.DemoTestLambda.herokuLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
